@@ -29,6 +29,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.springframework.boot:spring-boot-starter-security")
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+	testCompile group: 'org.springframework.security', name: 'spring-security-test', version: '5.0.7.RELEASE'
+
+
 	compile("com.auth0:java-jwt:3.4.0")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	compile("org.hsqldb:hsqldb")
