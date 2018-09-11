@@ -1,12 +1,6 @@
 package com.auth0.samples.authapi.springbootauthupdated.user;
 
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 @Document
 public class ApplicationUser {
 
