@@ -1,16 +1,11 @@
 package com.auth0.samples.authapi.springbootauthupdated;
 
 import com.auth0.jwt.JWT;
-import com.auth0.samples.authapi.springbootauthupdated.security.JWTAuthenticationFilter;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -36,18 +31,10 @@ public class ControllerTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
 
-    @MockBean
-    private AuthenticationManager authenticationManager;
-
-    @MockBean
-    private AbstractAuthenticationProcessingFilter abstractAuthenticationProcessingFilter;
-
     @Before
     public void setup() {
         mockMvc = MockMvcBuilders
                 .webAppContextSetup(webApplicationContext)
-                .apply(springSecurity())
-                .alwaysDo(print())
                 .build();
     }
     @Test
